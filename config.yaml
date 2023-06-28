@@ -16,6 +16,8 @@ actions:
         - KEY_LEFTCTRL+KEY_A
         - KEY_C
         - KEY_D
+        - BTN_RIGHT
+        - BTN_MIDDLE
 settings:
     swap_axis: false
     swap_direction_x: true

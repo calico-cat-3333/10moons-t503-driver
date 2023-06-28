@@ -40,7 +40,7 @@ pen_events = {
     ecodes.EV_KEY: pen_codes,
     ecodes.EV_ABS: [
         #AbsInfo input: value, min, max, fuzz, flat
-        (ecodes.ABS_X, AbsInfo(0, 0, config["pen"]["max_x"], 0, 0, config["pen"]["resolution_x"])),         
+        (ecodes.ABS_X, AbsInfo(0, 0, config["pen"]["max_x"], 0, 0, config["pen"]["resolution_x"])),
         (ecodes.ABS_Y, AbsInfo(0, 0, config["pen"]["max_y"], 0, 0, config["pen"]["resolution_y"])),
         (ecodes.ABS_PRESSURE, AbsInfo(0, 0, config["pen"]["max_pressure"], 0, 0, 0))
     ],
@@ -103,6 +103,10 @@ while True:
                 pressed = 2
             elif data[3] == 43: # Fourth button
                 pressed = 3
+            elif data[1] == 1 and data [3] == 28: # First button on Pen
+                pressed = 4
+            elif data[1] == 1 and data [3] == 22: # Second button on Pen
+                pressed = 5
             else:
                 press_type = 0
             key_codes = config["actions"]["tablet_buttons"][pressed].split("+")
