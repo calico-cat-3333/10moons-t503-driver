@@ -50,6 +50,9 @@ btn_events = {ecodes.EV_KEY: btn_codes}
 
 # Find the device
 dev = usb.core.find(idVendor=config["vendor_id"], idProduct=config["product_id"])
+if dev == None:
+    print('No Device Connected')
+    exit(1)
 # Select end point for reading second interface [2] for actual data
 # I don't know what [0] and [1] are used for
 ep = dev[0].interfaces()[2].endpoints()[0]
