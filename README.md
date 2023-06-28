@@ -1,4 +1,4 @@
-# 10moons-driver
+# 10moons-t503-driver
 
 Simple driver for 10moons T503 tablet for linux
 
@@ -8,7 +8,7 @@ Driver which provides basic functionality for 10moons T503 tablet:
 * 4 buttons on the tablet itself
 * Correct X and Y positioning
 * Pressure sensitivity
-* 2 buttons on the pen(This works fine on my device, but I can't guarantee that it will work fine on yours.)
+* 2 buttons on the pen (This works fine on my device, but I can't guarantee that it will work fine on yours.)
 
 Tablet has 4096 levels in both axes and 2047 levels of pressure.
 
