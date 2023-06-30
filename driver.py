@@ -124,5 +124,5 @@ while True:
     	vpen.close()
     	vbtn.close()
     	sys.exit("\nDriver terminated successfully.")
-    except Excception as e:
+    except Exception as e:
     	print(e)
