@@ -103,9 +103,9 @@ while True:
                 pressed = 2
             elif data[3] == 43: # Fourth button
                 pressed = 3
-            elif data[1] == 1 and data [3] == 28: # First button on Pen
+            elif data[1] == 1 and data [3] == 28: # First button on the Pen
                 pressed = 4
-            elif data[1] == 1 and data [3] == 22: # Second button on Pen
+            elif data[1] == 1 and data [3] == 29: # Second button on the Pen
                 pressed = 5
             else:
                 press_type = 0

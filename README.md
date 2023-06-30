@@ -8,9 +8,15 @@ Driver which provides basic functionality for 10moons T503 tablet:
 * 4 buttons on the tablet itself
 * Correct X and Y positioning
 * Pressure sensitivity
-* 2 buttons on the pen (This works fine on my device, but I can't guarantee that it will work fine on yours.)
+* 2 buttons on the pen (See "Buttons on the Pen" section below)
 
 Tablet has 4096 levels in both axes and 2047 levels of pressure.
+
+## Buttons on the Pen
+
+Buttons on the pen works fine on my device, but I can't guarantee that it will work fine on yours.
+
+The second button on the pen (with a '-' on it) can be configured with the official windows driver, changing the configuration will make this driver not detect this button. So, if this driver does not detect this button, you can open the configuration program on windows and reset this button to its default value.
 
 ## How to use
 
