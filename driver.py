@@ -119,10 +119,11 @@ while True:
     except usb.core.USBError as e:
         if e.args[0] == 19:
             vpen.close()
+            vbtn.close()
             raise Exception("Device has been disconnected")
     except KeyboardInterrupt:
-    	vpen.close()
-    	vbtn.close()
-    	sys.exit("\nDriver terminated successfully.")
+        vpen.close()
+        vbtn.close()
+        sys.exit("\nDriver terminated successfully.")
     except Exception as e:
-    	print(e)
+        print(e)
