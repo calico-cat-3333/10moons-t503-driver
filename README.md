@@ -1,5 +1,7 @@
 # 10moons-t503-driver
 
+[简体中文](https://github.com/calico-cat-3333/10moons-t503-driver/blob/master/README_zh.md)
+
 Simple driver for 10moons T503 tablet for linux
 
 ## About

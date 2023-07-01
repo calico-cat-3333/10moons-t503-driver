@@ -1,5 +1,7 @@
 # 10moons-t503-driver
 
+[English](https://github.com/calico-cat-3333/10moons-t503-driver/blob/master/README.md)
+
 简易的 天敏T503 10moons T503 数位板 Linux 驱动
 
 ## 关于
