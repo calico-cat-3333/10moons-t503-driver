@@ -10,7 +10,7 @@ Driver which provides basic functionality for 10moons T503 tablet:
 * Pressure sensitivity
 * 2 buttons on the pen (See "Buttons on the Pen" section below)
 
-Tablet has 4096 levels in both axes and 2047 levels of pressure.
+Tablet has 4080 levels in both axes and 2047 levels of pressure.
 
 ## Buttons on the Pen
 

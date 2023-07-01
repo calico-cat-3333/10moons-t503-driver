@@ -2,8 +2,8 @@ xinput_name: 10moons-pen
 vendor_id: 0x08f2
 product_id: 0x6811
 pen:
-    max_x: 4096
-    max_y: 4096
+    max_x: 4080
+    max_y: 4080
     max_pressure: 2047
     resolution_x: 20
     resolution_y: 30
