@@ -22,3 +22,8 @@ settings:
     swap_axis: false
     swap_direction_x: true
     swap_direction_y: false
+screen_mapping:
+    width_percent: 100
+    height_percent: 100
+    x_offset_percent: 0
+    y_offset_percent: 0

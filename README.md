@@ -11,6 +11,7 @@ Driver which provides basic functionality for 10moons T503 tablet:
 * Correct X and Y positioning
 * Pressure sensitivity
 * 2 buttons on the pen (See "Buttons on the Pen" section below)
+* Screen Mapping
 
 Tablet has 4080 levels in both axes and 2047 levels of pressure.
 
@@ -52,16 +53,34 @@ sudo python3 driver.py
 
 Configuration of the driver placed in _config.yaml_ file.
 
+### VID & PID
+
 You may need to change the *vendor_id* and the *product_id* but I'm not sure (You device can have the same values as mine, but if it is not you can run the *lsusb* command to find yours).
+
+### Buttons
 
 The first four of *tablet_buttons* will be assigned to the buttons on the tablet in left-to-right order, and the last two will be assigned to the two buttons on the pen. You can assign to them any button on the keyboard and their combinations separating them with a plus (+) sign.
 
-If you find that using this driver with your tablet results in reverse axis or directions (or both), you can modify parameters *swap_axis*, *swap_direction_x*, and *swap_direction_y* by changing false to true and another way around.
-
 To list all the possible key codes you may run:
 ```
-python -c "from evdev import ecodes; print([x for x in dir(ecodes) if 'KEY' in x])"
+python3 -c "from evdev import ecodes; print([x for x in dir(ecodes) if 'KEY' in x])"
 ```
+
+### Swap Axis or Directions
+
+If you find that using this driver with your tablet results in reverse axis or directions (or both), you can modify parameters *swap_axis*, *swap_direction_x*, and *swap_direction_y* by changing false to true and another way around.
+
+### Screen Mapping
+
+The 4 parameters are used to map the screen to the tablet, all values are in percent.
+* *width_percent* is the width of the mapped area.
+* *height_percent* is the height of the mapped area.
+* *x_offset_percent* is the horizontal distance of the top left corner of the mapped area relative to the top left corner of the screen.
+* *y_offset_percent* is the vertical distance of the top left corner of the mapped area relative to the top left corner of the screen.
+
+Their relationship is shown in the figure below.
+
+![screen_mapping.png](screen_mapping.png)
 
 ## Credits
 

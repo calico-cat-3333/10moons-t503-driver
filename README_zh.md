@@ -52,16 +52,34 @@ sudo python3 driver.py
 
 驱动程序的配置项列出在 _config.yaml_ 文件。
 
+### VID & PID
+
 您也许需要修改 *vendor_id* 和 *product_id* 但我不确定（您的设备可以与我的拥有相同的值, 但如果不同您可以运行 *lsusb* 命令以确定您的）。
+
+### Buttons
 
 *tablet_buttons* 的前四项将按照从左到右的顺序分配给数位板上的四个按钮，后两个将被分配给笔上的两个按钮。您可以为它们分配键盘上的任何按钮及其组合，用加号（+）分隔它们。
 
-如果您发现使用此驱动导致您的数位板的轴或方向反转（或者两者都有），您可以将参数 *swap_axis*, *swap_direction_x*, 和 *swap_direction_y* 的值通过将 false 修改为 true ，反之亦然。
-
 您可以通过运行下列命令以列出所有按键代码：
 ```
-python -c "from evdev import ecodes; print([x for x in dir(ecodes) if 'KEY' in x])"
+python3 -c "from evdev import ecodes; print([x for x in dir(ecodes) if 'KEY' in x])"
 ```
+
+### 交换坐标轴或方向
+
+如果您发现使用此驱动导致您的数位板的轴或方向反转（或者两者都有），您可以将参数 *swap_axis*, *swap_direction_x*, 和 *swap_direction_y* 的值从 false 修改为 true ，反之亦然。
+
+### 屏幕映射
+
+4个参数用于映射屏幕到数位板，数值均为百分比。
+* *width_percent* 是映射区域的宽。
+* *height_percent* 是映射区域的高。
+* *x_offset_percent* 是映射区域左上角相对屏幕左上角的水平距离。
+* *y_offset_percent* 是映射区域左上角相对屏幕左上角的垂直距离。
+
+他们的关系如下图所示。
+
+![screen_mapping.png](screen_mapping.png)
 
 ## Credits
 

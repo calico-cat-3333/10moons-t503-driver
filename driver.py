@@ -77,13 +77,19 @@ max_x = config["pen"]["max_x"] * config["settings"]["swap_direction_x"]
 max_y = config["pen"]["max_y"] * config["settings"]["swap_direction_y"]
 x1, x2, y1, y2 = (3, 2, 5, 4) if config["settings"]["swap_axis"] else (5, 4, 3, 2)
 
+# Screen Mapping
+width_precent = config["screen_mapping"]["width_percent"] / 100
+height_precent = config["screen_mapping"]["height_percent"] / 100
+x_offset = config["screen_mapping"]["x_offset_percent"] * config["pen"]["max_x"] / 100
+y_offset = config["screen_mapping"]["y_offset_percent"] * config["pen"]["max_y"] / 100
+
 # Infinite loop
 while True:
     try:
         data = dev.read(ep.bEndpointAddress, ep.wMaxPacketSize)
         if data[1] in [192, 193]: # Pen actions
-            pen_x = abs(max_x - (data[x1] * 255 + data[x2]))
-            pen_y = abs(max_y - (data[y1] * 255 + data[y2]))
+            pen_x = int((abs(max_x - (data[x1] * 255 + data[x2])) * width_precent) + x_offset)
+            pen_y = int((abs(max_y - (data[y1] * 255 + data[y2])) * height_precent) + y_offset)
             pen_pressure = data[7] * 255 + data[6]
             vpen.write(ecodes.EV_ABS, ecodes.ABS_X, pen_x)
             vpen.write(ecodes.EV_ABS, ecodes.ABS_Y, pen_y)
