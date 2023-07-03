@@ -11,6 +11,7 @@
 * 正确的 X Y 坐标
 * 压力感应
 * 笔上的 2 个按钮（参阅 "笔上的按钮" 章节）
+* 屏幕映射
 
 数位板拥有 X Y 两轴各 4080 级和 2047 级压感。
 
@@ -77,7 +78,7 @@ python3 -c "from evdev import ecodes; print([x for x in dir(ecodes) if 'KEY' in 
 * *x_offset_percent* 是映射区域左上角相对屏幕左上角的水平距离。
 * *y_offset_percent* 是映射区域左上角相对屏幕左上角的垂直距离。
 
-他们的关系如下图所示。
+它们的关系如下图所示。
 
 ![screen_mapping.png](screen_mapping.png)
 
