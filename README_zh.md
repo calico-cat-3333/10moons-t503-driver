@@ -82,6 +82,12 @@ python3 -c "from evdev import ecodes; print([x for x in dir(ecodes) if 'KEY' in 
 
 ![screen_mapping.png](screen_mapping.png)
 
+一个用于生成屏幕映射参数的简单程序同样被提供。运行
+```
+python3 screen_mapping_config.py
+```
+然后使用鼠标选择一个区域，就像截图工具那样。然后可以从终端输出中得到所选区域的屏幕映射参数。
+
 ## Credits
 
 部分代码取自: https://github.com/Mantaseus/Huion_Kamvas_Linux

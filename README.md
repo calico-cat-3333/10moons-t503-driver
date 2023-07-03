@@ -82,6 +82,14 @@ Their relationship is shown in the figure below.
 
 ![screen_mapping.png](screen_mapping.png)
 
+A simple program for generating screen mapping parameters is also provided. Run:
+
+```
+python3 screen_mapping_config.py
+```
+
+Then use the mouse to select an area, just like the screenshot tool does. The screen mapping parameters for the selected area can then be obtained from the terminal output.
+
 ## Credits
 
 Some parts of code are taken from: https://github.com/Mantaseus/Huion_Kamvas_Linux
